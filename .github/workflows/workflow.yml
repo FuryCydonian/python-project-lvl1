@@ -10,5 +10,5 @@ jobs:
         # we want to test our package on several versions of Python
         python-version: [ 3.6, 3.7, 3.8 ]
     steps:
-      run:
-        make lint
+      - name: run linter
+        run: make lint

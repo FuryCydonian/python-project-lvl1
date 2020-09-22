@@ -4,3 +4,14 @@ on: [push, pull_request]
 
 jobs:
   run: make lint
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # we want to test our package on several versions of Python
+        python-version: [ 3.6, 3.7, 3.8 ]
+    steps:
+      run:
+        make lint

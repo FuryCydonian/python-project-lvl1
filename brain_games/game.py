@@ -3,15 +3,16 @@ import prompt
 from brain_games.cli import welcome_user
 
 
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+
+
 def game():
     name = welcome_user()
     count = 0
-
-    def is_even(num):
-        if num % 2 == 0:
-            return True
-        else:
-            return False
 
     answers = {
             'yes': True,
@@ -39,7 +40,7 @@ def game():
                 else:
                     not_answer = 'yes'
 
-                print(f"{answer} is wrong answer ;(. Correct answer was {not_answer}. Let's try again, {name}!")
+                print(f'''{answer} is wrong answer ;(. Correct answer was {not_answer}. Let's try again, {name}!''')
                 break
 
     if count == 3:

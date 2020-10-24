@@ -6,3 +6,6 @@ lint:
 
 publish:
 	poetry publish -r python-project-lvl1 --build
+
+poetry config:
+	poetry config repositories.brain_games https://test.pypi.org/legacy/
